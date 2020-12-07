@@ -14,3 +14,4 @@ class Test_Abc:
     def test_002(self):
         allure.attach("这是第二个描述",'....')
         assert 0
+
