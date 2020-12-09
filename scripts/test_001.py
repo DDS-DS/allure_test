@@ -1,9 +1,13 @@
+import os,sys
+sys.path.append(os.getcwd())
+
 import pytest
 import allure
-import Page
 from Page.Page_Obj import Page_Obj
 from Base.Driver import init_driver
 from Page.Page_do import Add_Page
+
+
 # class Test_Abc():
 #
 #     @allure.step(title='第一个测试')
@@ -22,8 +26,10 @@ class Test_A():
     def setup_class(self):
         self.driver = init_driver()
         self.add_user_obj = Page_Obj(self.driver).return_Page_do()
+
     def teardown_class(self):
         self.driver.quit()
+
     def test_001(self):
         self.add_user_obj.add_user_click()
         self.add_user_obj.save_loc_click()
