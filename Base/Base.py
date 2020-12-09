@@ -8,7 +8,7 @@ class Base():
         self.driver = driver
     def find_element_o(self,loc):
        return WebDriverWait(self.driver,timeout=10,poll_frequency=0.5)\
-           .until(lambda x: x.find_element_o(*loc))
+           .until(lambda x: x.find_element(*loc))
     def click_element(self,loc):
         self.find_element_o(loc).click()
     def input_element(self,loc,text):
